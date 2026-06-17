@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enrico Feraldo - Portfolio Design System</title>
+    <meta
+      name="description"
+      content="A dark-first portfolio design system for Enrico Feraldo, focused on performance-driven software consulting, ROI, and accessible UI foundations."
+    >
+    <link rel="canonical" href="https://nrcfrld.netlify.app/design-system">
+    <meta property="og:title" content="Enrico Feraldo - Portfolio Design System">
+    <meta
+      property="og:description"
+      content="Design tokens and UI components for a performance-focused software consulting portfolio."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nrcfrld.netlify.app/design-system">
+    <meta property="og:image" content="https://nrcfrld.netlify.app/assets/og-design-system.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#111113">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260617-mobile-light">
+    <script src="assets/js/main.js?v=20260617-mobile-light" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="design-system.html" aria-label="Enrico Feraldo design system home">
+          <span class="brand-mark" aria-hidden="true">EF</span>
+          <span class="brand-copy">
+            <strong>Enrico Feraldo</strong>
+            <span>Design System</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+          <span>Menu</span>
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+          <a href="#tokens">Tokens</a>
+          <a href="#components">Components</a>
+          <a href="#forms">Forms</a>
+          <a href="#patterns">Patterns</a>
+          <a href="#layouts">Layouts</a>
+          <a href="#tech-stack">Tech</a>
+          <a href="#states">States</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio foundation / v1</p>
+            <h1>Performance-led interface standards for software consulting.</h1>
+            <p class="lede">
+              A compact dark-first system for Enrico Feraldo's portfolio, built for fast loading,
+              sharp hierarchy, accessible interaction, and a credible business-ROI narrative.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button-primary" href="#components">
+                <span class="button-icon" aria-hidden="true">+</span>
+                Explore Components
+              </a>
+              <a class="button button-secondary" href="#tokens">Review Tokens</a>
+            </div>
+          </div>
+
+          <aside class="signal-panel" aria-label="System health snapshot">
+            <div class="signal-panel-top">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>System baseline</span>
+            </div>
+            <dl class="metric-stack">
+              <div>
+                <dt>Core focus</dt>
+                <dd>Speed, stability, ROI</dd>
+              </div>
+              <div>
+                <dt>Interface mode</dt>
+                <dd>Dark-first</dd>
+              </div>
+              <div>
+                <dt>Runtime</dt>
+                <dd>HTML / CSS / JS</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section id="tokens" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">01 / Tokens</p>
+            <h2>Small decisions, locked in early.</h2>
+            <p>
+              The palette stays dark and precise, with pink and blue accents reserved for
+              intent, emphasis, and action.
+            </p>
+          </div>
+
+          <div class="grid grid-4 color-grid" aria-label="Color tokens">
+            <article class="swatch">
+              <span class="swatch-color bg-base"></span>
+              <strong>Base</strong>
+              <code>#111113</code>
+            </article>
+            <article class="swatch">
+              <span class="swatch-color bg-surface"></span>
+              <strong>Surface</strong>
+              <code>#1b1b20</code>
+            </article>
+            <article class="swatch">
+              <span class="swatch-color bg-pink"></span>
+              <strong>Accent Pink</strong>
+              <code>#f05aa8</code>
+            </article>
+            <article class="swatch">
+              <span class="swatch-color bg-blue"></span>
+              <strong>Accent Blue</strong>
+              <code>#74a7ff</code>
+            </article>
+            <article class="swatch">
+              <span class="swatch-color bg-success"></span>
+              <strong>Success</strong>
+              <code>#50d890</code>
+            </article>
+            <article class="swatch">
+              <span class="swatch-color bg-warning"></span>
+              <strong>Warning</strong>
+              <code>#ffd166</code>
+            </article>
+            <article class="swatch">
+              <span class="swatch-color bg-danger"></span>
+              <strong>Danger</strong>
+              <code>#ff6b6b</code>
+            </article>
+            <article class="swatch">
+              <span class="swatch-color bg-border"></span>
+              <strong>Border</strong>
+              <code>#34343c</code>
+            </article>
+          </div>
+
+          <div class="split-block">
+            <div class="type-card">
+              <p class="eyebrow">Typography</p>
+              <h3 class="display-sample">Fast systems deserve clear words.</h3>
+              <p class="text-large">
+                Plus Jakarta Sans gives the portfolio a local signal while staying readable
+                across dense technical sections and business-facing case studies.
+              </p>
+              <p class="text-small">Caption / 14px / stable rhythm for metadata and helper text.</p>
+            </div>
+
+            <div class="spacing-card" aria-label="Spacing scale">
+              <p class="eyebrow">Spacing</p>
+              <div class="spacing-row">
+                <span>4</span><i style="--w: 4px"></i>
+              </div>
+              <div class="spacing-row">
+                <span>8</span><i style="--w: 8px"></i>
+              </div>
+              <div class="spacing-row">
+                <span>16</span><i style="--w: 16px"></i>
+              </div>
+              <div class="spacing-row">
+                <span>24</span><i style="--w: 24px"></i>
+              </div>
+              <div class="spacing-row">
+                <span>40</span><i style="--w: 40px"></i>
+              </div>
+              <div class="spacing-row">
+                <span>64</span><i style="--w: 64px"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="components" class="section section-raised">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">02 / Components</p>
+            <h2>Controls and cards with one visual voice.</h2>
+            <p>
+              Components use compact radii, visible borders, and strong states so the system
+              works for both a portfolio and future product-like sections.
+            </p>
+          </div>
+
+          <div class="component-block">
+            <h3>Buttons</h3>
+            <div class="cluster" aria-label="Button examples">
+              <button class="button button-primary" type="button">
+                <span class="button-icon" aria-hidden="true">+</span>
+                Start Project
+              </button>
+              <button class="button button-secondary" type="button">View Proof</button>
+              <button class="button button-ghost" type="button">Read Case Study</button>
+              <button class="button button-danger" type="button">Remove</button>
+              <button class="button button-secondary" type="button" disabled>Disabled</button>
+            </div>
+          </div>
+
+          <div class="grid grid-4 card-grid">
+            <article class="card profile-card">
+              <div class="avatar" aria-hidden="true">EF</div>
+              <p class="eyebrow">Profile</p>
+              <h3>Performance-driven software consultant</h3>
+              <p>
+                Helping teams build fast, stable, scalable systems with a clear focus on ROI.
+              </p>
+              <a class="text-link" href="mailto:nrcfrld@gmail.com">nrcfrld@gmail.com</a>
+            </article>
+
+            <article class="card metric-card">
+              <p class="eyebrow">Metric</p>
+              <strong>4+</strong>
+              <span>years building and mentoring fullstack teams</span>
+            </article>
+
+            <article class="card service-card">
+              <p class="eyebrow">Service</p>
+              <h3>System design and performance improvement</h3>
+              <p>
+                Reduce bottlenecks, sharpen delivery, and make business operations easier to scale.
+              </p>
+              <div class="tag-row" aria-label="Service tags">
+                <span class="tag">PWA</span>
+                <span class="tag">TWA</span>
+                <span class="tag">AI Apps</span>
+              </div>
+            </article>
+
+            <article class="card quote-card">
+              <p class="eyebrow">Voice</p>
+              <blockquote>
+                "Build software that works, scales, and delivers real results."
+              </blockquote>
+              <cite>Portfolio principle</cite>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="forms" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">03 / Forms</p>
+            <h2>Accessible inputs for real contact flows.</h2>
+            <p>
+              Form controls are designed for future lead capture, project inquiry, and newsletter
+              sections without changing the visual language.
+            </p>
+          </div>
+
+          <form class="form-panel" action="#" method="post">
+            <div class="form-grid">
+              <label class="field">
+                <span>Name</span>
+                <input type="text" name="name" autocomplete="name" placeholder="Your name">
+              </label>
+              <label class="field">
+                <span>Project type</span>
+                <select name="project-type">
+                  <option>Performance audit</option>
+                  <option>Business platform</option>
+                  <option>AI powered application</option>
+                </select>
+              </label>
+              <label class="field field-wide">
+                <span>Context</span>
+                <textarea name="context" rows="4" placeholder="Tell me what needs to move faster."></textarea>
+              </label>
+            </div>
+
+            <fieldset class="choice-group">
+              <legend>Engagement preference</legend>
+              <label class="choice">
+                <input type="radio" name="engagement" checked>
+                <span>Consulting sprint</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="engagement">
+                <span>Build partnership</span>
+              </label>
+            </fieldset>
+
+            <div class="form-footer">
+              <label class="choice">
+                <input type="checkbox" name="updates">
+                <span>Send me practical software growth notes.</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" name="priority">
+                <span class="toggle-track" aria-hidden="true"></span>
+                <span>Priority review</span>
+              </label>
+              <button class="button button-primary" type="button">Preview Inquiry</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="patterns" class="section section-raised">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">04 / Patterns</p>
+            <h2>Reusable states for portfolio storytelling.</h2>
+            <p>
+              Badges, alerts, focus samples, and timeline rows support a future homepage,
+              experience page, and case-study archive.
+            </p>
+          </div>
+
+          <div class="pattern-grid">
+            <div class="panel">
+              <h3>Badges and links</h3>
+              <div class="tag-row">
+                <span class="tag tag-pink">Founder</span>
+                <span class="tag tag-blue">Instructor</span>
+                <span class="tag tag-green">Fullstack</span>
+              </div>
+              <p>
+                A text link should stay obvious:
+                <a class="text-link" href="https://www.linkedin.com/in/nrcfrld">LinkedIn profile</a>
+              </p>
+            </div>
+
+            <div class="panel">
+              <h3>Alerts</h3>
+              <div class="alert alert-success" role="status">
+                <strong>Ready:</strong> page structure passes the first content checklist.
+              </div>
+              <div class="alert alert-warning" role="status">
+                <strong>Watch:</strong> keep animated effects subtle and measurable.
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Timeline item</h3>
+              <ol class="timeline" aria-label="Experience timeline example">
+                <li>
+                  <span class="timeline-date">2023 - Present</span>
+                  <strong>Founder and CEO, PT Hecolab Solusi Digital</strong>
+                  <p>Strategic direction, product quality, client relationships, and delivery leadership.</p>
+                </li>
+                <li>
+                  <span class="timeline-date">2025 - Present</span>
+                  <strong>Fullstack Instructor and Program Lead, Hexchool</strong>
+                  <p>Mentoring practical web development with business-aware engineering standards.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="panel focus-demo">
+              <h3>Focus and interaction</h3>
+              <p>
+                Keyboard focus is intentionally visible across links, form fields, and buttons.
+              </p>
+              <button class="button button-secondary" type="button" data-toast-trigger>
+                Trigger State
+              </button>
+              <p class="toast-message" data-toast-message role="status" aria-live="polite" hidden>
+                State confirmed. Interaction stays small and fast.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="layouts" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">05 / Portfolio layouts</p>
+            <h2>Page patterns ready for the final portfolio.</h2>
+            <p>
+              These blocks are the first-pass composition for the future homepage: clear value,
+              proof, services, project evidence, experience, stack, and conversion.
+            </p>
+          </div>
+
+          <div class="portfolio-preview">
+            <article class="portfolio-hero-card">
+              <p class="eyebrow">Hero pattern</p>
+              <h3>Fast, stable systems that return business value.</h3>
+              <p>
+                Lead with a strong consulting promise, then support it with concrete signals:
+                systems, performance, AI applications, and delivery leadership.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="mailto:nrcfrld@gmail.com">Discuss a project</a>
+                <a class="button button-ghost" href="#tech-stack">See stack</a>
+              </div>
+            </article>
+
+            <aside class="proof-strip" aria-label="Portfolio proof metrics">
+              <div>
+                <strong>4+</strong>
+                <span>years fullstack delivery</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>focus areas: LMS, HealthTech, marketplace</span>
+              </div>
+              <div>
+                <strong>ROI</strong>
+                <span>performance and operation outcomes</span>
+              </div>
+            </aside>
+          </div>
+
+          <div class="service-layout" aria-label="Service section pattern">
+            <article class="service-feature">
+              <p class="eyebrow">Service pattern</p>
+              <h3>Performance improvement for real operating systems.</h3>
+              <p>
+                Use this layout for consulting offers that need business framing and technical
+                proof in the same scan path.
+              </p>
+            </article>
+            <div class="service-list">
+              <article>
+                <span class="service-index">01</span>
+                <h4>System design</h4>
+                <p>Architecture direction, bottleneck mapping, and scalable delivery plans.</p>
+              </article>
+              <article>
+                <span class="service-index">02</span>
+                <h4>PWA and TWA delivery</h4>
+                <p>Fast web applications that can move cleanly into mobile distribution.</p>
+              </article>
+              <article>
+                <span class="service-index">03</span>
+                <h4>AI powered operations</h4>
+                <p>Focused AI tooling for workflows, decisions, and internal productivity.</p>
+              </article>
+            </div>
+          </div>
+
+          <article class="case-study-card">
+            <div>
+              <p class="eyebrow">Case study pattern</p>
+              <h3>Business platform rebuild with measurable speed goals.</h3>
+              <p>
+                A featured project card should explain the constraint, the technical direction,
+                and the business outcome without becoming a wall of text.
+              </p>
+            </div>
+            <dl class="case-study-facts">
+              <div>
+                <dt>Role</dt>
+                <dd>Founder / Fullstack lead</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>Laravel, Vue, SQL</dd>
+              </div>
+              <div>
+                <dt>Signal</dt>
+                <dd>Reduced bottlenecks</dd>
+              </div>
+            </dl>
+          </article>
+
+          <div class="cta-band">
+            <div>
+              <p class="eyebrow">CTA pattern</p>
+              <h3>Have a slow system with a real business cost?</h3>
+              <p>Use this band near the end of the final portfolio to convert interest into a project conversation.</p>
+            </div>
+            <a class="button button-primary" href="mailto:nrcfrld@gmail.com">Start a performance review</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="section section-raised">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Tech stack</p>
+            <h2>Official logo tiles with readable labels.</h2>
+            <p>
+              Logos are loaded from one local SVG sprite. Text labels stay visible, so the grid
+              remains accessible and useful even when scanning quickly.
+            </p>
+          </div>
+
+          <div class="tech-stack-groups">
+            <section class="tech-group" aria-labelledby="frontend-stack">
+              <h3 id="frontend-stack">Frontend</h3>
+              <div class="tech-grid">
+                <article class="tech-tile tech-html">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-html"></use></svg></span>
+                  <strong>HTML</strong>
+                </article>
+                <article class="tech-tile tech-css">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-css"></use></svg></span>
+                  <strong>CSS</strong>
+                </article>
+                <article class="tech-tile tech-javascript">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-javascript"></use></svg></span>
+                  <strong>JavaScript</strong>
+                </article>
+                <article class="tech-tile tech-react">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-react"></use></svg></span>
+                  <strong>React</strong>
+                </article>
+                <article class="tech-tile tech-nextjs">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nextjs"></use></svg></span>
+                  <strong>Next.js</strong>
+                </article>
+                <article class="tech-tile tech-vue">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-vue"></use></svg></span>
+                  <strong>Vue</strong>
+                </article>
+                <article class="tech-tile tech-nuxt">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nuxt"></use></svg></span>
+                  <strong>Nuxt</strong>
+                </article>
+              </div>
+            </section>
+
+            <section class="tech-group" aria-labelledby="backend-stack">
+              <h3 id="backend-stack">Backend</h3>
+              <div class="tech-grid">
+                <article class="tech-tile tech-php">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-php"></use></svg></span>
+                  <strong>PHP</strong>
+                </article>
+                <article class="tech-tile tech-nodejs">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nodejs"></use></svg></span>
+                  <strong>Node.js</strong>
+                </article>
+                <article class="tech-tile tech-express">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-express"></use></svg></span>
+                  <strong>Express</strong>
+                </article>
+                <article class="tech-tile tech-nestjs">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nestjs"></use></svg></span>
+                  <strong>NestJS</strong>
+                </article>
+                <article class="tech-tile tech-laravel">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-laravel"></use></svg></span>
+                  <strong>Laravel</strong>
+                </article>
+                <article class="tech-tile tech-go">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-go"></use></svg></span>
+                  <strong>Go</strong>
+                </article>
+                <article class="tech-tile tech-gin">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-gin"></use></svg></span>
+                  <strong>Gin</strong>
+                </article>
+              </div>
+            </section>
+
+            <section class="tech-group" aria-labelledby="database-stack">
+              <h3 id="database-stack">Database</h3>
+              <div class="tech-grid">
+                <article class="tech-tile tech-sql">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-sql"></use></svg></span>
+                  <strong>SQL</strong>
+                </article>
+                <article class="tech-tile tech-postgresql">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-postgresql"></use></svg></span>
+                  <strong>PostgreSQL</strong>
+                </article>
+                <article class="tech-tile tech-mysql">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-mysql"></use></svg></span>
+                  <strong>MySQL</strong>
+                </article>
+                <article class="tech-tile tech-mssql">
+                  <span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-mssql"></use></svg></span>
+                  <strong>Microsoft SQL Server</strong>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="states" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">06 / Component states</p>
+            <h2>Practical states for portfolio interactions.</h2>
+            <p>
+              These states cover the final portfolio needs: active calls to action, selected
+              cards, loading feedback, validation messages, empty content, and status updates.
+            </p>
+          </div>
+
+          <div class="state-grid">
+            <article class="panel state-panel">
+              <h3>Button states</h3>
+              <div class="cluster">
+                <button class="button button-primary is-active" type="button">Active CTA</button>
+                <button class="button button-secondary is-loading" type="button" aria-busy="true">
+                  <span class="spinner" aria-hidden="true"></span>
+                  Loading
+                </button>
+                <button class="button button-ghost is-selected" type="button" aria-pressed="true">Selected</button>
+              </div>
+            </article>
+
+            <article class="panel state-panel">
+              <h3>Form states</h3>
+              <label class="field is-error">
+                <span>Email</span>
+                <input type="email" value="not-ready" aria-describedby="email-error">
+                <small id="email-error" class="field-message">Use a valid email address before sending.</small>
+              </label>
+              <label class="field is-success">
+                <span>Project focus</span>
+                <input type="text" value="Performance audit" aria-describedby="focus-success">
+                <small id="focus-success" class="field-message">Looks clear and specific.</small>
+              </label>
+            </article>
+
+            <article class="panel state-panel">
+              <h3>Card states</h3>
+              <div class="mini-card-row">
+                <div class="mini-card is-selected">
+                  <strong>Selected service</strong>
+                  <span>Performance review</span>
+                </div>
+                <div class="mini-card is-disabled" aria-disabled="true">
+                  <strong>Unavailable</strong>
+                  <span>Booked this week</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel state-panel is-empty">
+              <h3>Empty state</h3>
+              <p>No featured article yet. Use this state for future writing, case study, or testimonial slots.</p>
+              <a class="button button-secondary" href="#layouts">Review layout</a>
+            </article>
+
+            <article class="panel state-panel">
+              <h3>Status variants</h3>
+              <div class="alert alert-success" role="status"><strong>Success:</strong> inquiry draft is ready.</div>
+              <div class="alert alert-warning" role="status"><strong>Warning:</strong> project scope needs a target metric.</div>
+              <div class="alert alert-danger" role="alert"><strong>Error:</strong> contact method is missing.</div>
+            </article>
+
+            <article class="panel state-panel">
+              <h3>Toast state</h3>
+              <p>Use for tiny confirmations that do not block reading or navigation.</p>
+              <button class="button button-secondary" type="button" data-toast-trigger>
+                Trigger State
+              </button>
+              <p class="toast-message" data-toast-message role="status" aria-live="polite" hidden>
+                State confirmed. Interaction stays small and fast.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Enrico Feraldo / HecoLab portfolio system</p>
+        <a class="text-link" href="#main">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
