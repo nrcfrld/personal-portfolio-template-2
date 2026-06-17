@@ -585,7 +585,7 @@ p {
   align-self: center;
   isolation: isolate;
   overflow: visible;
-  min-height: 610px;
+  /* min-height: 610px; */
   transform: rotate(1deg);
 }
 
@@ -648,7 +648,7 @@ p {
 .profile-float-note {
   position: absolute;
   top: 106px;
-  right: -18px;
+  right: -68px;
   z-index: 2;
   max-width: 164px;
   padding: var(--space-2) var(--space-3);
@@ -659,7 +659,7 @@ p {
 .profile-side-note {
   position: absolute;
   right: auto;
-  bottom: 72px;
+  top: 30px;
   left: -54px;
   z-index: 2;
   width: 174px;
@@ -670,7 +670,7 @@ p {
 .profile-avatar {
   display: grid;
   width: 72px;
-  height: 72px;
+  /* height: 72px; */
   place-items: center;
   margin-bottom: var(--space-5);
   border: 1px solid rgba(240, 90, 168, 0.55);
@@ -1151,6 +1151,7 @@ textarea:hover {
 
 .panel h3 {
   margin-bottom: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .panel p + .button,
