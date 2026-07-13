@@ -1446,50 +1446,12 @@ textarea:hover {
 }
 
 .portfolio-overview {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
-  gap: var(--space-5);
-  align-items: end;
-}
-
-.portfolio-counts {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-2);
-  margin: 0;
-}
-
-.portfolio-counts div {
-  min-height: 106px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: var(--radius-3);
-  background: rgba(27, 27, 32, 0.78);
-  padding: var(--space-3);
-}
-
-.portfolio-counts dt {
-  color: var(--color-text);
-  font-size: clamp(1.35rem, 3vw, 2.1rem);
-  font-weight: 800;
-  line-height: 1.05;
-}
-
-.portfolio-counts dd {
-  margin: var(--space-2) 0 0;
-  color: var(--color-muted);
-  font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1.35;
-  text-transform: uppercase;
+  max-width: 980px;
 }
 
 .portfolio-grid {
-  display: grid;
-  gap: var(--space-4);
-}
-
-.portfolio-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-count: 2;
+  column-gap: var(--space-4);
   margin-top: var(--space-4);
 }
 
@@ -1498,13 +1460,14 @@ textarea:hover {
   display: grid;
   align-content: start;
   gap: var(--space-3);
-  min-height: 244px;
+  break-inside: avoid;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--radius-3);
   background:
     linear-gradient(135deg, rgba(116, 167, 255, 0.07), rgba(240, 90, 168, 0.045)),
     rgba(27, 27, 32, 0.84);
+  margin-bottom: var(--space-4);
   padding: var(--space-4);
   box-shadow: var(--shadow-tight);
 }
@@ -1518,7 +1481,6 @@ textarea:hover {
 }
 
 .portfolio-card-feature {
-  min-height: 244px;
   background:
     linear-gradient(145deg, rgba(116, 167, 255, 0.13), rgba(240, 90, 168, 0.095) 52%, rgba(255, 209, 102, 0.045)),
     rgba(27, 27, 32, 0.9);
@@ -1915,7 +1877,6 @@ textarea:hover {
   .portfolio-preview,
   .service-layout,
   .case-study-card,
-  .portfolio-overview,
   .experience-layout,
   .education-grid {
     grid-template-columns: 1fr;
@@ -1938,14 +1899,9 @@ textarea:hover {
   }
 
   .work-grid,
-  .portfolio-grid,
   .instagram-grid,
   .proof-strip-horizontal {
     grid-template-columns: 1fr;
-  }
-
-  .portfolio-counts {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .proof-strip-horizontal div {
@@ -2147,22 +2103,14 @@ textarea:hover {
   .service-layout,
   .service-list,
   .work-grid,
-  .portfolio-grid,
   .tech-stack-groups,
   .education-list {
     gap: var(--space-3);
   }
 
-  .portfolio-overview {
-    gap: var(--space-3);
-  }
-
-  .portfolio-counts {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-counts div {
-    min-height: auto;
+  .portfolio-grid {
+    column-count: 1;
+    column-gap: 0;
   }
 
   .portfolio-card {
