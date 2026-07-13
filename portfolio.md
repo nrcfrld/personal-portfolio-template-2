@@ -249,13 +249,13 @@
 - Dampak bisnis, misalnya jumlah materi terjual, peserta tryout, atau peningkatan engagement siswa.
 - Tanggung jawab spesifik di proyek: backend API, frontend end user, admin panel, scoring engine, performance tuning, atau system design.
 
-## 5. HexSchool
+## 5. Hexchool
 
-**HexSchool** adalah platform LMS untuk software engineering dan coding. Platform ini menjual course coding, bootcamp, dan private course, sekaligus membutuhkan manajemen konten pembelajaran, materi, sertifikat, dan pembayaran melalui payment gateway. Situs resminya ada di [hexschool.com](https://hexschool.com).
+**Hexchool** adalah platform LMS untuk software engineering dan coding. Platform ini menjual course coding, bootcamp, dan private course, sekaligus membutuhkan manajemen konten pembelajaran, materi, sertifikat, dan pembayaran melalui payment gateway. Situs resminya ada di [hexschool.com](https://hexschool.com).
 
 ### Ringkasan
 
-- **Nama produk:** HexSchool
+- **Nama produk:** Hexchool
 - **Website:** [hexschool.com](https://hexschool.com)
 - **Kategori:** LMS untuk software engineering
 - **Fokus utama:** Course delivery, bootcamp, private course, content management, certificate generation, dan payment processing

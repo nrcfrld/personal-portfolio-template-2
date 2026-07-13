@@ -1483,15 +1483,9 @@ textarea:hover {
   text-transform: uppercase;
 }
 
-.portfolio-spotlight-grid,
 .portfolio-grid {
   display: grid;
   gap: var(--space-4);
-}
-
-.portfolio-spotlight-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: var(--space-4);
 }
 
 .portfolio-grid {
@@ -1503,15 +1497,15 @@ textarea:hover {
   position: relative;
   display: grid;
   align-content: start;
-  gap: var(--space-4);
-  min-height: 356px;
+  gap: var(--space-3);
+  min-height: 244px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--radius-3);
   background:
     linear-gradient(135deg, rgba(116, 167, 255, 0.07), rgba(240, 90, 168, 0.045)),
     rgba(27, 27, 32, 0.84);
-  padding: var(--space-5);
+  padding: var(--space-4);
   box-shadow: var(--shadow-tight);
 }
 
@@ -1524,7 +1518,7 @@ textarea:hover {
 }
 
 .portfolio-card-feature {
-  min-height: 430px;
+  min-height: 244px;
   background:
     linear-gradient(145deg, rgba(116, 167, 255, 0.13), rgba(240, 90, 168, 0.095) 52%, rgba(255, 209, 102, 0.045)),
     rgba(27, 27, 32, 0.9);
@@ -1538,42 +1532,14 @@ textarea:hover {
 }
 
 .portfolio-card h3 {
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-size: clamp(1.22rem, 2.2vw, 1.72rem);
   line-height: 1.08;
 }
 
 .portfolio-card p:not(.eyebrow) {
   color: var(--color-text-soft);
-  font-size: 0.96rem;
-  line-height: 1.6;
-}
-
-.portfolio-meta {
-  display: grid;
-  gap: var(--space-3);
-  margin: 0;
-}
-
-.portfolio-meta div {
-  display: grid;
-  gap: var(--space-1);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: var(--space-3);
-}
-
-.portfolio-meta dt {
-  color: var(--color-muted);
-  font-size: 0.74rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.portfolio-meta dd {
-  margin: 0;
-  color: var(--color-text);
   font-size: 0.92rem;
-  font-weight: 750;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .portfolio-tags {
@@ -1602,10 +1568,12 @@ textarea:hover {
 }
 
 .portfolio-link {
+  max-width: min(100%, 230px);
   flex: 0 0 auto;
   border-color: rgba(116, 167, 255, 0.36);
   background: rgba(116, 167, 255, 0.1);
   color: var(--color-blue-strong);
+  overflow-wrap: anywhere;
   text-decoration: none;
   transition:
     transform 180ms var(--ease-out),
@@ -1970,7 +1938,6 @@ textarea:hover {
   }
 
   .work-grid,
-  .portfolio-spotlight-grid,
   .portfolio-grid,
   .instagram-grid,
   .proof-strip-horizontal {
@@ -2180,7 +2147,6 @@ textarea:hover {
   .service-layout,
   .service-list,
   .work-grid,
-  .portfolio-spotlight-grid,
   .portfolio-grid,
   .tech-stack-groups,
   .education-list {
