@@ -65,6 +65,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.is-modal-open {
+  overflow: hidden;
+}
+
 body::before {
   position: fixed;
   inset: 0 auto 0 0;
@@ -1486,14 +1490,34 @@ textarea:hover {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-3);
   background: rgba(255, 255, 255, 0.04);
-  aspect-ratio: 16 / 10;
+}
+
+.portfolio-thumbnail-trigger {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  text-align: inherit;
+}
+
+.portfolio-thumbnail img,
+.portfolio-preview-dialog img {
+  width: 100%;
+  height: auto;
 }
 
 .portfolio-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  transition:
+    filter 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
+}
+
+.portfolio-thumbnail-trigger:hover img,
+.portfolio-thumbnail-trigger:focus-visible img {
+  filter: brightness(1.08);
+  transform: scale(1.01);
 }
 
 .portfolio-card-feature {
@@ -1571,6 +1595,83 @@ textarea:hover {
   border-color: rgba(255, 209, 102, 0.36);
   background: rgba(255, 209, 102, 0.1);
   color: #ffe6a0;
+}
+
+.portfolio-preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: var(--space-5);
+}
+
+.portfolio-preview-modal[hidden] {
+  display: none;
+}
+
+.portfolio-preview-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 8, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.portfolio-preview-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  max-height: calc(100vh - (var(--space-5) * 2));
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-3);
+  background: #0d0d11;
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.52);
+}
+
+.portfolio-preview-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 56px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(13, 13, 17, 0.9);
+  padding: var(--space-2) var(--space-3);
+  backdrop-filter: blur(14px);
+}
+
+.portfolio-preview-toolbar h2 {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 0.86rem;
+  line-height: 1.2;
+}
+
+.portfolio-preview-close {
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-2);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--color-text);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.portfolio-preview-close:hover {
+  border-color: rgba(240, 90, 168, 0.58);
+  background: rgba(240, 90, 168, 0.14);
+}
+
+.portfolio-preview-dialog img {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .instagram-heading {
