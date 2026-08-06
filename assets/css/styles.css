@@ -335,6 +335,41 @@ section {
     letter-spacing: -0.5px;
 }
 
+/* Archive List */
+.archive-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.archive-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a.archive-item:hover {
+    opacity: 0.7;
+    padding-left: 10px;
+}
+
+.archive-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.archive-meta {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 /* Journey */
 .journey-item { margin-bottom: 60px; }
 .journey-header {
@@ -404,6 +439,12 @@ footer {
         flex: 0 0 75%;
         max-width: 320px;
         scroll-snap-align: center;
+    }
+
+    .archive-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
 
     .journey-header {
