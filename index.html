@@ -1,661 +1,278 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Enrico Feraldo - Personal Portfolio</title>
-    <meta
-      name="description"
-      content="Personal portfolio of Enrico Feraldo Kalengkongang, founder of HecoLab, fullstack engineer, instructor, and computer science student in Jakarta."
-    >
-    <link rel="canonical" href="https://nrcfrld.netlify.app/">
-    <meta property="og:title" content="Enrico Feraldo - Personal Portfolio">
-    <meta
-      property="og:description"
-      content="Founder, fullstack engineer, instructor, and computer science student based in Jakarta."
-    >
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nrcfrld.netlify.app/">
-    <meta property="og:image" content="https://nrcfrld.netlify.app/assets/og-home.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#111113">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260617-playful-hero3">
-    <script src="assets/js/main.js?v=20260617-playful-hero3" defer></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Enrico Feraldo Kalengkongang",
-        "jobTitle": "Fullstack Engineer",
-        "url": "https://nrcfrld.netlify.app/",
-        "email": "mailto:nrcfrld@gmail.com",
-        "telephone": "+62895321379775",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Jagakarsa",
-          "addressRegion": "Jakarta",
-          "addressCountry": "ID"
-        },
-        "sameAs": ["https://www.linkedin.com/in/nrcfrld"]
-      }
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrico | Fullstack Engineer</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
 
-    <svg class="icon-sprite" aria-hidden="true" focusable="false">
-      <symbol id="icon-building" viewBox="0 0 24 24">
-        <path d="M4.75 21.25V5.75A2 2 0 0 1 6.75 3.75h8.5a2 2 0 0 1 2 2v15.5"></path>
-        <path d="M8 8h1.5M8 12h1.5M8 16h1.5M13.5 8H15M13.5 12H15M13.5 16H15M3 21.25h18"></path>
-      </symbol>
-      <symbol id="icon-server" viewBox="0 0 24 24">
-        <path d="M5.75 4.75h12.5a2 2 0 0 1 2 2v2.5a2 2 0 0 1-2 2H5.75a2 2 0 0 1-2-2v-2.5a2 2 0 0 1 2-2Z"></path>
-        <path d="M5.75 12.75h12.5a2 2 0 0 1 2 2v2.5a2 2 0 0 1-2 2H5.75a2 2 0 0 1-2-2v-2.5a2 2 0 0 1 2-2ZM7 8h.01M7 16h.01"></path>
-      </symbol>
-      <symbol id="icon-chart" viewBox="0 0 24 24">
-        <path d="M4.75 19.25h14.5"></path>
-        <path d="M7 16.25v-5.5M12 16.25v-9.5M17 16.25v-3.5"></path>
-      </symbol>
-      <symbol id="icon-academic" viewBox="0 0 24 24">
-        <path d="m3 8 9-4 9 4-9 4-9-4Z"></path>
-        <path d="M7 10.25v4.5c1.55 1.35 3.25 2 5 2s3.45-.65 5-2v-4.5"></path>
-        <path d="M20 9v5"></path>
-      </symbol>
-      <symbol id="icon-envelope" viewBox="0 0 24 24">
-        <path d="M5.75 5.75h12.5a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2H5.75a2 2 0 0 1-2-2v-8.5a2 2 0 0 1 2-2Z"></path>
-        <path d="m5 8 7 5 7-5"></path>
-      </symbol>
-      <symbol id="icon-briefcase" viewBox="0 0 24 24">
-        <path d="M8.75 7.25v-1A2.25 2.25 0 0 1 11 4h2a2.25 2.25 0 0 1 2.25 2.25v1"></path>
-        <path d="M4.75 7.25h14.5a2 2 0 0 1 2 2v8A2.75 2.75 0 0 1 18.5 20H5.5a2.75 2.75 0 0 1-2.75-2.75v-8a2 2 0 0 1 2-2Z"></path>
-        <path d="M9 12h6"></path>
-      </symbol>
-    </svg>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Enrico Feraldo portfolio home">
-          <span class="brand-mark" aria-hidden="true">EF</span>
-          <span class="brand-copy">
-            <strong>Enrico Feraldo</strong>
-            <span>Personal Portfolio</span>
-          </span>
-        </a>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
-          <span>Menu</span>
-          <span class="nav-toggle-icon" aria-hidden="true"></span>
-        </button>
-
-        <nav class="nav" id="primary-nav" aria-label="Primary navigation">
-          <a href="#portfolio">Portfolio</a>
-          <a href="#instagram">Instagram</a>
-          <a href="#experience">Experience</a>
-          <a href="#stack">Stack</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main">
-      <section class="home-hero section">
-        <div class="container home-hero-grid">
-          <div class="home-hero-copy">
-            <p class="eyebrow">Personal portfolio</p>
-            <div class="identity-kicker" aria-label="Profile identity">
-              <span>Jagakarsa, Jakarta</span>
-              <span>Software Consultant</span>
-              <span>Fullstack Instructor</span>
+    <nav>
+        <a href="index.html" class="nav-brand">Enrico</a>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#expertise">Expertise</a>
+                <a href="#portfolio">Works</a>
+                <a href="#journey">Journey</a>
+                <a href="#instagram">Instagram</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
             </div>
-            <h1>Enrico Feraldo Kalengkongang</h1>
-            <p class="hero-role">Fullstack engineer, software consultant, and instructor based in Jakarta.</p>
-            <p class="lede mobile-trim">
-              I spend most of my time building web products, leading small software teams,
-              teaching fullstack development, and learning how good systems are shaped by
-              real people using them.
-            </p>
-            <p class="lede mobile-only">I build web products, teach fullstack development, and run HecoLab.</p>
-            <div class="profile-links" aria-label="Profile contact links">
-              <a href="mailto:nrcfrld@gmail.com">nrcfrld@gmail.com</a>
-              <a href="tel:+62895321379775">+62 895 3213 79775</a>
-              <a href="https://www.linkedin.com/in/nrcfrld">LinkedIn / nrcfrld</a>
-            </div>
-            <div class="hero-actions" aria-label="Primary actions">
-              <a class="button button-primary" href="mailto:nrcfrld@gmail.com">
-                <span class="button-icon" aria-hidden="true"><svg class="ui-icon"><use href="#icon-envelope"></use></svg></span>
-                Say hello
-              </a>
-              <a class="button button-secondary" href="#experience">View experience</a>
-            </div>
-          </div>
-
-          <aside class="home-signal profile-snapshot" aria-label="Profile snapshot">
-            <figure class="profile-photo-frame">
-              <img
-                class="profile-photo"
-                src="assets/profile.webp"
-                alt="Portrait of Enrico Feraldo Kalengkongang"
-                width="764"
-                height="956"
-                decoding="async"
-                fetchpriority="high"
-              >
-            </figure>
-            <!-- <p class="profile-side-note">I like working close to the messy middle: code, product decisions, team learning, and the parts where software meets people.</p> -->
-            <dl class="metric-stack">
-              <div>
-                <dt>Current work</dt>
-                <dd>Consultant, Engineer, Instructor</dd>
-              </div>
-              <div>
-                <dt>Location</dt>
-                <dd>Jakarta, Indonesia</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </section>
-
-      <section id="portfolio" class="section portfolio-section">
-        <div class="container">
-          <div class="portfolio-overview">
-            <div class="section-heading">
-              <p class="eyebrow">Selected portfolio</p>
-              <h2>Selected projects shipped across product, AI, and web platforms.</h2>
-              <p class="mobile-trim">
-                A compact selection of AI products, LMS platforms, marketplaces, procurement systems,
-                SaaS tools, and campaign websites.
-              </p>
-              <p class="mobile-only">AI products, LMS platforms, marketplaces, SaaS, and campaign sites.</p>
-            </div>
-          </div>
-
-          <div class="portfolio-grid" aria-label="Portfolio project list">
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View Taroo preview" data-portfolio-preview>
-                  <img
-                    src="assets/taroo-thumbnail.png"
-                    alt="Taroo landing page builder interface preview"
-                    width="1148"
-                    height="1175"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">AI product</p>
-                  <h3>Taroo</h3>
-                </div>
-                <a class="portfolio-link" href="https://taroo.id" target="_blank" rel="noreferrer">taroo.id</a>
-              </div>
-              <p>AI landing page builder with event tracking, automatic subdomains, subscriptions, monorepo, and CI/CD.</p>
-              <div class="portfolio-tags" aria-label="Taroo tags">
-                <span>React/Vite/Astro</span>
-                <span>NestJS</span>
-                <span>PostgreSQL</span>
-              </div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View ProcureX preview" data-portfolio-preview>
-                  <img
-                    src="assets/procurex-thumbnail.jpg"
-                    alt="ProcureX procurement system homepage preview"
-                    width="2556"
-                    height="1222"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">Enterprise</p>
-                  <h3>ProcureX</h3>
-                </div>
-                <a class="portfolio-link" href="https://procurement.pupuk-indonesia.com/" target="_blank" rel="noreferrer">procurement.pupuk-indonesia.com</a>
-              </div>
-              <p>End-to-end procurement super app for Pupuk Indonesia using microservices, Laravel Octane, React, PostgreSQL, and SAP integration.</p>
-              <div class="portfolio-tags" aria-label="ProcureX tags">
-                <span>Laravel Octane</span>
-                <span>React</span>
-                <span>Microservices</span>
-              </div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View Gkomunika preview" data-portfolio-preview>
-                  <img
-                    src="assets/gkomunika-thumbnail.webp"
-                    alt="Gkomunika eSIM order dashboard preview"
-                    width="2549"
-                    height="1218"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">Fulfillment</p>
-                  <h3>Gkomunika</h3>
-                </div>
-                <a class="portfolio-link" href="https://gkomunika.com" target="_blank" rel="noreferrer">gkomunika.com</a>
-              </div>
-              <p>Multivendor eSIM fulfillment system for marketplace orders, Shopify, vendor routing, QR Code generation, and customer email delivery.</p>
-              <div class="portfolio-tags" aria-label="Gkomunika tags">
-                <span>Express/Laravel</span>
-                <span>React/Vite</span>
-                <span>eSIM</span>
-              </div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View Colabo preview" data-portfolio-preview>
-                  <img
-                    src="assets/colabo-thumbnail.webp"
-                    alt="Colabo project management board interface preview"
-                    width="2559"
-                    height="1213"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">AI project management</p>
-                  <h3>Colabo</h3>
-                </div>
-                <a class="portfolio-link" href="https://colabo.hecolab.id" target="_blank" rel="noreferrer">colabo.hecolab.id</a>
-              </div>
-              <p>AI project management tool for weekly reports, PDF summaries, and Telegram/WhatsApp project assistant flows.</p>
-              <div class="portfolio-tags"><span>Go/Fiber</span><span>React/Vite</span><span>PostgreSQL</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View Sejawat IDN preview" data-portfolio-preview>
-                  <img
-                    src="assets/sejawatidn-thumbnail.webp"
-                    alt="Sejawat IDN learning platform homepage preview"
-                    width="1581"
-                    height="1195"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">LMS / tryout</p>
-                  <h3>Sejawat IDN</h3>
-                </div>
-                <a class="portfolio-link" href="https://sejawatidn.com" target="_blank" rel="noreferrer">sejawatidn.com</a>
-              </div>
-              <p>LMS and online tryout platform for medical exam prep, built for high-concurrency tryouts and variable scoring.</p>
-              <div class="portfolio-tags"><span>Laravel/MySQL</span><span>Next.js</span><span>Midtrans</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View Hexchool preview" data-portfolio-preview>
-                  <img
-                    src="assets/hexchool-thumbnail.webp"
-                    alt="Hexchool coding bootcamp homepage preview"
-                    width="1637"
-                    height="933"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">LMS / coding</p>
-                  <h3>Hexchool</h3>
-                </div>
-                <a class="portfolio-link" href="https://hexschool.com" target="_blank" rel="noreferrer">hexschool.com</a>
-              </div>
-              <p>Software engineering LMS for courses, bootcamps, private classes, certificates, payment flow, and Docker-based CI/CD.</p>
-              <div class="portfolio-tags"><span>Next.js</span><span>React/Vite</span><span>Laravel API</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View Kelas Drafter preview" data-portfolio-preview>
-                  <img
-                    src="assets/kelasdrafter-thumbnail.webp"
-                    alt="Kelas Drafter architecture course dashboard preview"
-                    width="2560"
-                    height="1216"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">LMS / architecture</p>
-                  <h3>Kelas Drafter</h3>
-                </div>
-                <a class="portfolio-link" href="https://www.kelasdrafter.id/" target="_blank" rel="noreferrer">kelasdrafter.id</a>
-              </div>
-              <p>Architecture LMS for online bootcamps, video courses, learning materials, access control, and payment flow.</p>
-              <div class="portfolio-tags"><span>Next.js</span><span>Laravel/MySQL</span><span>Midtrans</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View DokterGPT preview" data-portfolio-preview>
-                  <img
-                    src="assets/doktergpt-thumbnail.webp"
-                    alt="DokterGPT medical assistant landing page preview"
-                    width="2560"
-                    height="1199"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">AI assistant</p>
-                  <h3>DokterGPT</h3>
-                </div>
-                <a class="portfolio-link" href="https://doktergpt.id" target="_blank" rel="noreferrer">doktergpt.id</a>
-              </div>
-              <p>WhatsApp-based AI assistant for doctors, covering drug references, dose calculation, ordering, and paid access.</p>
-              <div class="portfolio-tags"><span>Express</span><span>LangChain</span><span>GPT-3.5</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">Marketplace</p>
-                  <h3>PikPak</h3>
-                </div>
-                <span class="portfolio-status">Discontinued</span>
-              </div>
-              <p>Marketplace with one-market-location shipment logic, direct logistics/payment integrations, plus PWA/TWA deployment to Play Store.</p>
-              <div class="portfolio-tags"><span>Laravel</span><span>Nuxt/Vue</span><span>Angular</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">SaaS commerce</p>
-                  <h3>CLS Ecommerce</h3>
-                </div>
-              </div>
-              <p>Local Shopify-like SaaS for merchant storefronts and commerce operations, with multi-tenant architecture as the core challenge.</p>
-              <div class="portfolio-tags"><span>Nuxt/Vue</span><span>Laravel API</span><span>MySQL</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <figure class="portfolio-thumbnail">
-                <button class="portfolio-thumbnail-trigger" type="button" aria-label="View BNI Klaster preview" data-portfolio-preview>
-                  <img
-                    src="assets/bni-klaster-thumbnail.webp"
-                    alt="BNI Klaster campaign website preview"
-                    width="1000"
-                    height="1000"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                </button>
-              </figure>
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">Campaign site</p>
-                  <h3>BNI Klaster</h3>
-                </div>
-              </div>
-              <p>Static campaign website template for BNI UMKM division, implemented manually from custom client UI requirements.</p>
-              <div class="portfolio-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            </article>
-
-            <article class="portfolio-card">
-              <div class="portfolio-card-header">
-                <div>
-                  <p class="eyebrow">Campaign site</p>
-                  <h3>Lokolaborasi by Kumparan</h3>
-                </div>
-              </div>
-              <p>Static event campaign website for Kumparan, built with manual HTML, CSS, and JavaScript implementation from a client-specific design.</p>
-              <div class="portfolio-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="instagram" class="section">
-        <div class="container">
-          <div class="section-heading instagram-heading">
-            <p class="eyebrow">Instagram</p>
-            <h2>Small updates outside the code editor.</h2>
-            <p class="mobile-trim">
-              A few public posts from Instagram: notes, moments, and things I have been part of recently.
-            </p>
-            <p class="mobile-only">A few public posts and recent moments.</p>
-          </div>
-
-          <div class="instagram-slider-controls" aria-label="Instagram slider controls">
-            <button class="instagram-slider-button" type="button" aria-label="Previous Instagram post" data-instagram-prev>
-              <span aria-hidden="true">&lsaquo;</span>
+            <button class="theme-toggle" aria-label="Toggle Theme">
+                <i data-lucide="sun" id="theme-icon"></i>
             </button>
-            <button class="instagram-slider-button" type="button" aria-label="Next Instagram post" data-instagram-next>
-              <span aria-hidden="true">&rsaquo;</span>
-            </button>
-          </div>
-
-          <div class="instagram-grid" aria-label="Instagram post embeds" data-instagram-slider>
-            <article class="instagram-post">
-              <blockquote
-                class="instagram-media"
-                data-instgrm-captioned
-                data-instgrm-permalink="https://www.instagram.com/p/DZlmbbhzx2g/"
-                data-instgrm-version="14"
-              >
-                <a href="https://www.instagram.com/p/DZlmbbhzx2g/">View this post on Instagram</a>
-              </blockquote>
-            </article>
-            <article class="instagram-post">
-              <blockquote
-                class="instagram-media"
-                data-instgrm-captioned
-                data-instgrm-permalink="https://www.instagram.com/p/DX8KgsCT0ih/"
-                data-instgrm-version="14"
-              >
-                <a href="https://www.instagram.com/p/DX8KgsCT0ih/">View this post on Instagram</a>
-              </blockquote>
-            </article>
-            <article class="instagram-post">
-              <blockquote
-                class="instagram-media"
-                data-instgrm-captioned
-                data-instgrm-permalink="https://www.instagram.com/reel/DU_1V6pEr0b/"
-                data-instgrm-version="14"
-              >
-                <a href="https://www.instagram.com/reel/DU_1V6pEr0b/">View this reel on Instagram</a>
-              </blockquote>
-            </article>
-          </div>
+            <button class="menu-btn" id="menu-toggle">Menu</button>
         </div>
-      </section>
+    </nav>
 
-      <section id="experience" class="section">
-        <div class="container experience-layout">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Places where I have learned by building.</h2>
-            <p class="mobile-trim">
-              These roles are a mix of writing code, guiding teams, teaching, and figuring things out
-              in production environments.
-            </p>
-            <p class="mobile-only">Code, teams, teaching, and production work.</p>
-          </div>
-
-          <ol class="timeline experience-timeline" aria-label="Professional experience timeline">
-            <li>
-              <span class="timeline-date">Aug 2025 - Present</span>
-              <strong>Fullstack Instructor and Program Lead, Hexchool by HecoLab</strong>
-              <p class="mobile-trim">Leading practical fullstack learning programs for web development teams.</p>
-            </li>
-            <li>
-              <span class="timeline-date">Feb 2023 - Present</span>
-              <strong>Founder and Tech Lead, PT Hecolab Solusi Digital</strong>
-              <p class="mobile-trim">Starting the company, shaping products, working with the team, and learning through real projects.</p>
-            </li>
-            <li>
-              <span class="timeline-date">Nov 2020 - Jul 2024</span>
-              <strong>Full Stack Engineer, Alter Indonesia</strong>
-              <p class="mobile-trim">Fullstack engineering, mentoring, and production application support.</p>
-            </li>
-            <li>
-              <span class="timeline-date">Jan 2023 - Jul 2024</span>
-              <strong>Frontend Engineer, PT Pupuk Indonesia</strong>
-              <p class="mobile-trim">Frontend work and internal system improvements for enterprise workflows.</p>
-            </li>
-            <li>
-              <span class="timeline-date">Feb 2022 - Mar 2023</span>
-              <strong>Fullstack Web Developer, PT Warung Digital Nusantara</strong>
-              <p class="mobile-trim">Marketplace development, PWA/TWA work, and mobile app UI/UX design.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="stack" class="section section-raised">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Tech stack</p>
-            <h2>Tools I have used along the way.</h2>
-            <p class="mobile-trim">
-              I like working across the stack, from interface details to backend logic and databases.
-              These are the tools that have shown up often in my projects.
-            </p>
-            <p class="mobile-only">Frontend, backend, and database tools I work with.</p>
-          </div>
-
-          <div class="tech-stack-groups">
-            <section class="tech-group" aria-labelledby="home-frontend-stack">
-              <h3 id="home-frontend-stack">Frontend</h3>
-              <div class="tech-grid">
-                <article class="tech-tile tech-html"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-html"></use></svg></span><strong>HTML</strong></article>
-                <article class="tech-tile tech-css"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-css"></use></svg></span><strong>CSS</strong></article>
-                <article class="tech-tile tech-javascript"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-javascript"></use></svg></span><strong>JavaScript</strong></article>
-                <article class="tech-tile tech-react"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-react"></use></svg></span><strong>React</strong></article>
-                <article class="tech-tile tech-nextjs"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nextjs"></use></svg></span><strong>Next.js</strong></article>
-                <article class="tech-tile tech-vue"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-vue"></use></svg></span><strong>Vue</strong></article>
-                <article class="tech-tile tech-nuxt"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nuxt"></use></svg></span><strong>Nuxt</strong></article>
-              </div>
-            </section>
-
-            <section class="tech-group" aria-labelledby="home-backend-stack">
-              <h3 id="home-backend-stack">Backend</h3>
-              <div class="tech-grid">
-                <article class="tech-tile tech-php"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-php"></use></svg></span><strong>PHP</strong></article>
-                <article class="tech-tile tech-nodejs"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nodejs"></use></svg></span><strong>Node.js</strong></article>
-                <article class="tech-tile tech-express"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-express"></use></svg></span><strong>Express</strong></article>
-                <article class="tech-tile tech-nestjs"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-nestjs"></use></svg></span><strong>NestJS</strong></article>
-                <article class="tech-tile tech-laravel"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-laravel"></use></svg></span><strong>Laravel</strong></article>
-                <article class="tech-tile tech-go"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-go"></use></svg></span><strong>Go</strong></article>
-                <article class="tech-tile tech-gin"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-gin"></use></svg></span><strong>Gin</strong></article>
-              </div>
-            </section>
-
-            <section class="tech-group" aria-labelledby="home-database-stack">
-              <h3 id="home-database-stack">Database</h3>
-              <div class="tech-grid">
-                <article class="tech-tile tech-sql"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-sql"></use></svg></span><strong>SQL</strong></article>
-                <article class="tech-tile tech-postgresql"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-postgresql"></use></svg></span><strong>PostgreSQL</strong></article>
-                <article class="tech-tile tech-mysql"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-mysql"></use></svg></span><strong>MySQL</strong></article>
-                <article class="tech-tile tech-mssql"><span class="tech-logo-frame"><svg class="tech-icon" aria-hidden="true"><use href="assets/icons/tech-stack.svg#icon-mssql"></use></svg></span><strong>Microsoft SQL Server</strong></article>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container education-grid">
-          <div class="section-heading">
-            <p class="eyebrow">Education</p>
-            <h2>Education and learning path.</h2>
-          </div>
-          <div class="education-list">
-            <article class="panel">
-              <span class="section-icon" aria-hidden="true"><svg class="ui-icon"><use href="#icon-academic"></use></svg></span>
-              <h3>BINUS University</h3>
-              <p>Bachelor's degree, Computer Science. Feb 2023 - Dec 2025.</p>
-            </article>
-            <article class="panel">
-              <span class="section-icon" aria-hidden="true"><svg class="ui-icon"><use href="#icon-academic"></use></svg></span>
-              <h3>Politeknik LP3I Kampus Pasar Minggu</h3>
-              <p>Associate's degree, Informatika Komputer. 2019 - 2022.</p>
-            </article>
-            <article class="panel">
-              <span class="section-icon" aria-hidden="true"><svg class="ui-icon"><use href="#icon-academic"></use></svg></span>
-              <h3>Digital Talent Scholarship 2019</h3>
-              <p>Junior Web Developer training program at Politeknik Negeri Jakarta.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section section-raised">
-        <div class="container">
-          <div class="cta-band contact-band">
-            <div>
-              <span class="section-icon" aria-hidden="true"><svg class="ui-icon"><use href="#icon-envelope"></use></svg></span>
-              <p class="eyebrow">Contact</p>
-              <h2>Want to talk or work on something together?</h2>
-              <p class="mobile-trim">
-                I am always open to good conversations around software, education, product ideas,
-                and the kind of work that needs patient technical thinking.
-              </p>
-              <p class="mobile-only">Open for software, education, and product conversations.</p>
-            </div>
-            <div class="contact-actions">
-              <a class="button button-primary" href="mailto:nrcfrld@gmail.com">Send email</a>
-              <a class="button button-secondary" href="https://www.linkedin.com/in/nrcfrld">LinkedIn</a>
-              <a class="text-link" href="tel:+62895321379775">+62 895 3213 79775</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>Enrico Feraldo / HecoLab / Jakarta, Indonesia</p>
-        <a class="text-link" href="#main">Back to top</a>
-      </div>
-    </footer>
-
-    <div class="portfolio-preview-modal" role="dialog" aria-modal="true" aria-labelledby="portfolio-preview-title" hidden data-portfolio-modal>
-      <div class="portfolio-preview-backdrop" data-portfolio-modal-close></div>
-      <div class="portfolio-preview-dialog">
-        <div class="portfolio-preview-toolbar">
-          <h2 id="portfolio-preview-title">Portfolio preview</h2>
-          <button class="portfolio-preview-close" type="button" aria-label="Close preview" data-portfolio-modal-close>&times;</button>
-        </div>
-        <img alt="" data-portfolio-modal-image>
-      </div>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobile-menu">
+        <a href="#expertise">Expertise</a>
+        <a href="#portfolio">Works</a>
+        <a href="#journey">Journey</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
     </div>
+
+    <div class="container">
+        
+        <!-- Section: Hero -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Enrico.</h1>
+                <p>CEO & Fullstack Engineer. Focus on building high-performance digital systems through architectural precision and design clarity.</p>
+                <div class="hero-actions">
+                    <a href="mailto:nrcfrld@gmail.com" class="button button-primary">Say Hello</a>
+                    <a href="#journey" class="button button-secondary">View Journey</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/profile.webp" alt="Enrico Feraldo" decoding="async">
+            </div>
+        </section>
+
+        <!-- Section: Expertise -->
+        <section id="expertise">
+            <div class="section-label">01 / Expertise</div>
+            <div class="expertise-grid">
+                <div class="expertise-box">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li><span>PHP / Node.js</span> <span>Core</span></li>
+                        <li><span>Express / NestJS</span> <span>API</span></li>
+                        <li><span>Laravel / Go</span> <span>Architecture</span></li>
+                        <li><span>PostgreSQL / MySQL</span> <span>Database</span></li>
+                    </ul>
+                </div>
+                <div class="expertise-box">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li><span>React / Next.js</span> <span>Interface</span></li>
+                        <li><span>Vue / Nuxt</span> <span>Logic</span></li>
+                        <li><span>JavaScript</span> <span>Dynamic</span></li>
+                        <li><span>HTML / CSS</span> <span>Foundation</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Works with Images -->
+        <section id="portfolio">
+            <div class="section-label">02 / Selected Works</div>
+            <div class="portfolio-grid">
+                
+                <a href="https://taroo.id" target="_blank" class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="assets/taroo-thumbnail.png" alt="Taroo Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">AI Product / React, NestJS, Postgres</span>
+                        <span class="project-name">Taroo</span>
+                    </div>
+                </a>
+
+                <a href="https://procurement.pupuk-indonesia.com/" target="_blank" class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="assets/procurex-thumbnail.jpg" alt="ProcureX Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Enterprise / Laravel Octane, React</span>
+                        <span class="project-name">ProcureX</span>
+                    </div>
+                </a>
+
+                <a href="https://colabo.hecolab.id" target="_blank" class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="assets/colabo-thumbnail.webp" alt="Colabo Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">AI Project Mgmt / Go, Fiber, React</span>
+                        <span class="project-name">Colabo</span>
+                    </div>
+                </a>
+
+                <a href="https://hexschool.com" target="_blank" class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="assets/hexchool-thumbnail.webp" alt="Hexchool Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">LMS Coding / Next.js, React, Laravel API</span>
+                        <span class="project-name">Hexchool</span>
+                    </div>
+                </a>
+
+                <a href="https://www.kelasdrafter.id/" target="_blank" class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="assets/kelasdrafter-thumbnail.webp" alt="Kelas Drafter Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">LMS Architecture / Next.js, Laravel</span>
+                        <span class="project-name">Kelas Drafter</span>
+                    </div>
+                </a>
+
+                <a href="https://doktergpt.id" target="_blank" class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="assets/doktergpt-thumbnail.webp" alt="DokterGPT Project">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">AI Assistant / Express, LangChain</span>
+                        <span class="project-name">DokterGPT</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Section: Journey -->
+        <section id="journey">
+            <div class="section-label">03 / Journey</div>
+            <div class="journey-content">
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <span class="journey-role">Fullstack Instructor & Program Lead</span>
+                        <span class="journey-date">Aug 2025 — Present</span>
+                    </div>
+                    <p style="color: var(--muted);">Hexchool by HecoLab. Leading practical fullstack learning programs for web development teams.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <span class="journey-role">Founder & Tech Lead</span>
+                        <span class="journey-date">Feb 2023 — Present</span>
+                    </div>
+                    <p style="color: var(--muted);">PT Hecolab Solusi Digital. Starting the company, shaping products, working with the team, and learning through real projects.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <span class="journey-role">Full Stack Engineer</span>
+                        <span class="journey-date">Nov 2020 — Jul 2024</span>
+                    </div>
+                    <p style="color: var(--muted);">Alter Indonesia. Fullstack engineering, mentoring, and production application support.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <span class="journey-role">Frontend Engineer</span>
+                        <span class="journey-date">Jan 2023 — Jul 2024</span>
+                    </div>
+                    <p style="color: var(--muted);">PT Pupuk Indonesia. Frontend work and internal system improvements for enterprise workflows.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <span class="journey-role">Fullstack Web Developer</span>
+                        <span class="journey-date">Feb 2022 — Mar 2023</span>
+                    </div>
+                    <p style="color: var(--muted);">PT Warung Digital Nusantara. Marketplace development, PWA/TWA work, and mobile app UI/UX design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Instagram -->
+        <section id="instagram">
+            <div class="section-label">04 / Instagram</div>
+            <div class="portfolio-grid" aria-label="Instagram post embeds">
+                <article class="instagram-post">
+                  <blockquote
+                    class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/p/DayldhBTP1O/"
+                    data-instgrm-version="14"
+                  >
+                    <a href="https://www.instagram.com/p/DayldhBTP1O/">View this post on Instagram</a>
+                  </blockquote>
+                </article>
+                <article class="instagram-post">
+                  <blockquote
+                    class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/p/DZlmbbhzx2g/"
+                    data-instgrm-version="14"
+                  >
+                    <a href="https://www.instagram.com/p/DZlmbbhzx2g/">View this post on Instagram</a>
+                  </blockquote>
+                </article>
+                <article class="instagram-post">
+                  <blockquote
+                    class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/p/DX8KgsCT0ih/"
+                    data-instgrm-version="14"
+                  >
+                    <a href="https://www.instagram.com/p/DX8KgsCT0ih/">View this post on Instagram</a>
+                  </blockquote>
+                </article>
+                <article class="instagram-post">
+                  <blockquote
+                    class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DU_1V6pEr0b/"
+                    data-instgrm-version="14"
+                  >
+                    <a href="https://www.instagram.com/reel/DU_1V6pEr0b/">View this reel on Instagram</a>
+                  </blockquote>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section: Education -->
+        <section id="education">
+            <div class="section-label">05 / Education</div>
+            <div class="journey-content">
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <span class="journey-role">BINUS University</span>
+                        <span class="journey-date">Feb 2023 — Dec 2025</span>
+                    </div>
+                    <p style="color: var(--muted);">Bachelor's degree, Computer Science.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-header">
+                        <span class="journey-role">Politeknik LP3I</span>
+                        <span class="journey-date">2019 — 2022</span>
+                    </div>
+                    <p style="color: var(--muted);">Associate's degree, Informatika Komputer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Contact -->
+        <section id="contact">
+            <div class="section-label">06 / Connect</div>
+            <div class="contact-content">
+                <a href="https://www.linkedin.com/in/nrcfrld" target="_blank" class="contact-link">LINKEDIN</a>
+                <a href="https://wa.me/62895321379775" target="_blank" class="contact-link">WHATSAPP</a>
+                <a href="mailto:nrcfrld@gmail.com" class="contact-link">EMAIL</a>
+            </div>
+        </section>
+
+        <footer>
+            <div>Enrico &copy; 2026</div>
+            <div>Swiss Grid / Dark First</div>
+            <div>Fullstack Engineering</div>
+        </footer>
+
+    </div>
+
+    <script src="assets/js/main.js"></script>
     <script async src="https://www.instagram.com/embed.js"></script>
-  </body>
+</body>
 </html>

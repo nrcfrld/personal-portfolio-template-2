@@ -1,115 +1,74 @@
-const toastTriggers = document.querySelectorAll("[data-toast-trigger]");
-const navToggle = document.querySelector("[data-nav-toggle]");
-const instagramSlider = document.querySelector("[data-instagram-slider]");
-const instagramPrev = document.querySelector("[data-instagram-prev]");
-const instagramNext = document.querySelector("[data-instagram-next]");
-const portfolioPreviewTriggers = document.querySelectorAll("[data-portfolio-preview]");
-const portfolioModal = document.querySelector("[data-portfolio-modal]");
-const portfolioModalImage = document.querySelector("[data-portfolio-modal-image]");
-const portfolioModalCloseTriggers = document.querySelectorAll("[data-portfolio-modal-close]");
-let portfolioModalReturnTarget = null;
-
-if (navToggle) {
-  const siteHeader = navToggle.closest(".site-header");
-  const nav = document.getElementById(navToggle.getAttribute("aria-controls"));
-
-  const setNavOpen = (isOpen) => {
-    siteHeader?.classList.toggle("is-nav-open", isOpen);
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  };
-
-  navToggle.addEventListener("click", () => {
-    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-    setNavOpen(!isOpen);
-  });
-
-  nav?.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
-      setNavOpen(false);
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      setNavOpen(false);
-    }
-  });
-}
-
-toastTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const panel = trigger.closest(".panel");
-    const message = panel?.querySelector("[data-toast-message]");
-
-    if (message) {
-      message.hidden = false;
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
     }
 
-    trigger.textContent = "State Triggered";
-  });
+    // Theme Toggle Logic
+    const themeToggleBtn = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (themeToggleBtn) {
+        // Initialize theme based on preference or data attribute if we want to save it later
+        
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', targetTheme);
+            
+            if (themeIcon) {
+                themeIcon.setAttribute('data-lucide', targetTheme === 'dark' ? 'sun' : 'moon');
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }
+        });
+    }
+
+    // Mobile Menu Logic
+    const menuBtn = document.getElementById('menu-toggle');
+    const menuOverlay = document.getElementById('mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-overlay a');
+    
+    if (menuBtn && menuOverlay) {
+        menuBtn.addEventListener('click', () => {
+            menuOverlay.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            menuBtn.textContent = menuOverlay.classList.contains('active') ? 'Close' : 'Menu';
+        });
+
+        // Close menu when a link is clicked
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                menuBtn.textContent = 'Menu';
+            });
+        });
+    }
+
+    // Smooth scroll link highlighting (Desktop)
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section');
+
+    if (navLinks.length > 0 && sections.length > 0) {
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href) {
+                    link.style.opacity = href === `#${current}` ? '1' : '0.5';
+                }
+            });
+        });
+    }
 });
-
-if (instagramSlider && instagramPrev && instagramNext) {
-  const getSlideDistance = () => {
-    const firstSlide = instagramSlider.querySelector(".instagram-post");
-    const gap = Number.parseFloat(getComputedStyle(instagramSlider).columnGap) || 0;
-    return firstSlide ? firstSlide.getBoundingClientRect().width + gap : instagramSlider.clientWidth;
-  };
-
-  const scrollSlider = (direction) => {
-    instagramSlider.scrollBy({
-      left: direction * getSlideDistance(),
-      behavior: "smooth",
-    });
-  };
-
-  instagramPrev.addEventListener("click", () => scrollSlider(-1));
-  instagramNext.addEventListener("click", () => scrollSlider(1));
-}
-
-if (portfolioModal && portfolioModalImage) {
-  const closeButton = portfolioModal.querySelector(".portfolio-preview-close");
-
-  const closePortfolioModal = () => {
-    portfolioModal.hidden = true;
-    document.body.classList.remove("is-modal-open");
-    portfolioModalImage.removeAttribute("src");
-    portfolioModalImage.alt = "";
-    portfolioModalReturnTarget?.focus();
-    portfolioModalReturnTarget = null;
-  };
-
-  const openPortfolioModal = (trigger) => {
-    const image = trigger.querySelector("img");
-
-    if (!image) {
-      return;
-    }
-
-    portfolioModalReturnTarget = trigger;
-    portfolioModalImage.src = image.currentSrc || image.src;
-    portfolioModalImage.alt = image.alt;
-    portfolioModal.hidden = false;
-    document.body.classList.add("is-modal-open");
-    closeButton?.focus();
-  };
-
-  portfolioPreviewTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", () => openPortfolioModal(trigger));
-  });
-
-  portfolioModalCloseTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", closePortfolioModal);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !portfolioModal.hidden) {
-      closePortfolioModal();
-    }
-
-    if (event.key === "Tab" && !portfolioModal.hidden && closeButton) {
-      event.preventDefault();
-      closeButton.focus();
-    }
-  });
-}
